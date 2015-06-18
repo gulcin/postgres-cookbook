@@ -1,0 +1,6 @@
+-- This commands are copied from Marco Nenciarini for suppressing the auto-initdb and auto-start.
+
+apt-get install postgresql-common
+printf "create_main_cluster = false\nstart_conf = 'manual'\n" >> /etc/postgresql-common/createcluster.conf
+apt-get install postgresql-contrib-9.4
+
